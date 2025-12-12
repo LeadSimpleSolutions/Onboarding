@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Onboarding Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px; background: #f8f9fa;">
+
+<h2 style="text-align: center;">Client Onboarding Form</h2>
+<p style="text-align: center;">Fill in your brand colors, fonts, and content so we can auto-generate your site.</p>
+
+<form id="onboardingForm" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+
+  <!-- Brand colors -->
+  <label for="brandColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Color (hex)</label>
+  <input type="text" id="brandColor" placeholder="#8FAB36" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="brandHoverColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Hover Color (hex)</label>
+  <input type="text" id="brandHoverColor" placeholder="#A5C64A" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="accentColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Accent Color (hex)</label>
+  <input type="text" id="accentColor" placeholder="#FFC857" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="darkColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Dark Color (text) (hex)</label>
+  <input type="text" id="darkColor" placeholder="#FFFFFF" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="mutedColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Muted Color (hex)</label>
+  <input type="text" id="mutedColor" placeholder="#C7C7C7" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="bgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Background Color (hex)</label>
+  <input type="text" id="bgColor" placeholder="#0A0A0A" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="cardBgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Card Background Color (hex)</label>
+  <input type="text" id="cardBgColor" placeholder="#141414" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <!-- Layout & shadows -->
+  <label for="borderRadius" style="display: block; margin: 10px 0 4px; font-weight: 600;">Border Radius (px)</label>
+  <input type="number" id="borderRadius" placeholder="12" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="wrapWidth" style="display: block; margin: 10px 0 4px; font-weight: 600;">Max Wrap Width (px)</label>
+  <input type="number" id="wrapWidth" placeholder="1100" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="boxShadow" style="display: block; margin: 10px 0 4px; font-weight: 600;">Box Shadow (CSS)</label>
+  <input type="text" id="boxShadow" placeholder="0 8px 30px rgba(0,0,0,0.35)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="glassBg" style="display: block; margin: 10px 0 4px; font-weight: 600;">Glass Background (RGBA)</label>
+  <input type="text" id="glassBg" placeholder="rgba(255,255,255,0.08)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="fontFamily" style="display: block; margin: 10px 0 4px; font-weight: 600;">Font Family (CSS)</label>
+  <input type="text" id="fontFamily" placeholder="'Inter', system-ui, sans-serif" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <!-- Optional: Site content -->
+  <label for="siteName" style="display: block; margin: 10px 0 4px; font-weight: 600;">Site Name</label>
+  <input type="text" id="siteName" placeholder="Your Brand Name" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="siteTagline" style="display: block; margin: 10px 0 4px; font-weight: 600;">Tagline</label>
+  <input type="text" id="siteTagline" placeholder="Your tagline goes here" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="heroTitle" style="display: block; margin: 10px 0 4px; font-weight: 600;">Hero Section Title</label>
+  <input type="text" id="heroTitle" placeholder="Welcome to Our Brand" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+
+  <label for="heroSubtitle" style="display: block; margin: 10px 0 4px; font-weight: 600;">Hero Subtitle / Lead Text</label>
+  <textarea id="heroSubtitle" rows="3" placeholder="We create amazing experiences" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+
+  <button type="submit" style="padding: 12px 20px; background: #8FAB36; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 700;">Generate Template</button>
+</form>
+
+<pre id="output" style="margin-top:20px; background:#eee; padding:10px; border-radius:6px;"></pre>
+
+<script>
+document.getElementById('onboardingForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const data = {
+    brandColor: document.getElementById('brandColor').value,
+    brandHoverColor: document.getElementById('brandHoverColor').value,
+    accentColor: document.getElementById('accentColor').value,
+    darkColor: document.getElementById('darkColor').value,
+    mutedColor: document.getElementById('mutedColor').value,
+    bgColor: document.getElementById('bgColor').value,
+    cardBgColor: document.getElementById('cardBgColor').value,
+    borderRadius: document.getElementById('borderRadius').value,
+    wrapWidth: document.getElementById('wrapWidth').value,
+    boxShadow: document.getElementById('boxShadow').value,
+    glassBg: document.getElementById('glassBg').value,
+    fontFamily: document.getElementById('fontFamily').value,
+    siteName: document.getElementById('siteName').value,
+    siteTagline: document.getElementById('siteTagline').value,
+    heroTitle: document.getElementById('heroTitle').value,
+    heroSubtitle: document.getElementById('heroSubtitle').value
+  };
+
+  document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'client_onboarding.json';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
