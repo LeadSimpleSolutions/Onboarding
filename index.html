@@ -8,31 +8,31 @@
 <body style="font-family: Arial, sans-serif; padding: 20px; background: #f8f9fa;">
 
 <h2 style="text-align: center;">Client Onboarding Form</h2>
-<p style="text-align: center;">Fill in your brand colors, fonts, and content so we can auto-generate your site.</p>
+<p style="text-align: center;">Pick your brand colors, fonts, and content so we can auto-generate your site.</p>
 
 <form id="onboardingForm" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
 
-  <!-- Brand colors -->
-  <label for="brandColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Color (hex)</label>
-  <input type="text" id="brandColor" placeholder="#8FAB36" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <!-- Brand colors with color pickers -->
+  <label for="brandColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Color</label>
+  <input type="color" id="brandColor" value="#8FAB36" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="brandHoverColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Hover Color (hex)</label>
-  <input type="text" id="brandHoverColor" placeholder="#A5C64A" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="brandHoverColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Hover Color</label>
+  <input type="color" id="brandHoverColor" value="#A5C64A" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="accentColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Accent Color (hex)</label>
-  <input type="text" id="accentColor" placeholder="#FFC857" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="accentColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Accent Color</label>
+  <input type="color" id="accentColor" value="#FFC857" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="darkColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Dark Color (text) (hex)</label>
-  <input type="text" id="darkColor" placeholder="#FFFFFF" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="darkColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Dark Color (text)</label>
+  <input type="color" id="darkColor" value="#FFFFFF" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="mutedColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Muted Color (hex)</label>
-  <input type="text" id="mutedColor" placeholder="#C7C7C7" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="mutedColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Muted Color</label>
+  <input type="color" id="mutedColor" value="#C7C7C7" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="bgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Background Color (hex)</label>
-  <input type="text" id="bgColor" placeholder="#0A0A0A" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="bgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Background Color</label>
+  <input type="color" id="bgColor" value="#0A0A0A" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
-  <label for="cardBgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Card Background Color (hex)</label>
-  <input type="text" id="cardBgColor" placeholder="#141414" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label for="cardBgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Card Background Color</label>
+  <input type="color" id="cardBgColor" value="#141414" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
   <!-- Layout & shadows -->
   <label for="borderRadius" style="display: block; margin: 10px 0 4px; font-weight: 600;">Border Radius (px)</label>
@@ -42,13 +42,13 @@
   <input type="number" id="wrapWidth" placeholder="1100" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
   <label for="boxShadow" style="display: block; margin: 10px 0 4px; font-weight: 600;">Box Shadow (CSS)</label>
-  <input type="text" id="boxShadow" placeholder="0 8px 30px rgba(0,0,0,0.35)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <input type="text" id="boxShadow" value="0 8px 30px rgba(0,0,0,0.35)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
   <label for="glassBg" style="display: block; margin: 10px 0 4px; font-weight: 600;">Glass Background (RGBA)</label>
-  <input type="text" id="glassBg" placeholder="rgba(255,255,255,0.08)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <input type="text" id="glassBg" value="rgba(255,255,255,0.08)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
   <label for="fontFamily" style="display: block; margin: 10px 0 4px; font-weight: 600;">Font Family (CSS)</label>
-  <input type="text" id="fontFamily" placeholder="'Inter', system-ui, sans-serif" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <input type="text" id="fontFamily" value="'Inter', system-ui, sans-serif" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
 
   <!-- Optional: Site content -->
   <label for="siteName" style="display: block; margin: 10px 0 4px; font-weight: 600;">Site Name</label>
