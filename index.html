@@ -3,104 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client Onboarding Form</title>
+<title>Client Onboarding</title>
 </head>
-<body style="font-family: Arial, sans-serif; padding: 20px; background: #f8f9fa;">
+<body style="font-family: Arial, sans-serif; background:#111; color:#fff; display:flex; justify-content:center; align-items:flex-start; min-height:100vh; padding:20px;">
 
-<h2 style="text-align: center;">Client Onboarding Form</h2>
-<p style="text-align: center;">Pick your brand colors, fonts, and content so we can auto-generate your site.</p>
+<form id="onboardingForm" style="background:#222; padding:30px; border-radius:12px; max-width:600px; width:100%; box-shadow:0 8px 30px rgba(0,0,0,0.35);">
+  <h2 style="margin-bottom:20px; text-align:center;">Client Onboarding</h2>
 
-<form id="onboardingForm" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+  <!-- Site info -->
+  <label style="display:block; margin:12px 0 6px;">Business Name</label>
+  <input type="text" id="siteName" style="width:100%; padding:8px; border-radius:8px; border:1px solid #444; background:#111; color:#fff;" required>
 
-  <!-- Brand colors with color pickers -->
-  <label for="brandColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Color</label>
-  <input type="color" id="brandColor" value="#8FAB36" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Business Tagline</label>
+  <input type="text" id="siteTagline" style="width:100%; padding:8px; border-radius:8px; border:1px solid #444; background:#111; color:#fff;" required>
 
-  <label for="brandHoverColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Brand Hover Color</label>
-  <input type="color" id="brandHoverColor" value="#A5C64A" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Hero Title</label>
+  <input type="text" id="heroTitle" style="width:100%; padding:8px; border-radius:8px; border:1px solid #444; background:#111; color:#fff;" required>
 
-  <label for="accentColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Accent Color</label>
-  <input type="color" id="accentColor" value="#FFC857" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Hero Subtitle</label>
+  <input type="text" id="heroSubtitle" style="width:100%; padding:8px; border-radius:8px; border:1px solid #444; background:#111; color:#fff;" required>
 
-  <label for="darkColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Dark Color (text)</label>
-  <input type="color" id="darkColor" value="#FFFFFF" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <!-- Main color palette -->
+  <label style="display:block; margin:12px 0 6px;">Brand Color</label>
+  <input type="color" id="brandColor" value="#8FAB36" style="width:100%; height:40px; border:none; padding:0;">
 
-  <label for="mutedColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Muted Color</label>
-  <input type="color" id="mutedColor" value="#C7C7C7" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Dark Color</label>
+  <input type="color" id="darkColor" value="#FFFFFF" style="width:100%; height:40px; border:none; padding:0;">
 
-  <label for="bgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Background Color</label>
-  <input type="color" id="bgColor" value="#0A0A0A" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Muted Color</label>
+  <input type="color" id="mutedColor" value="#C7C7C7" style="width:100%; height:40px; border:none; padding:0;">
 
-  <label for="cardBgColor" style="display: block; margin: 10px 0 4px; font-weight: 600;">Card Background Color</label>
-  <input type="color" id="cardBgColor" value="#141414" required style="width: 100%; height: 50px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Background Color</label>
+  <input type="color" id="bgColor" value="#0A0A0A" style="width:100%; height:40px; border:none; padding:0;">
 
-  <!-- Layout & shadows -->
-  <label for="borderRadius" style="display: block; margin: 10px 0 4px; font-weight: 600;">Border Radius (px)</label>
-  <input type="number" id="borderRadius" placeholder="12" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <label style="display:block; margin:12px 0 6px;">Card Background Color</label>
+  <input type="color" id="cardBgColor" value="#141414" style="width:100%; height:40px; border:none; padding:0;">
 
-  <label for="wrapWidth" style="display: block; margin: 10px 0 4px; font-weight: 600;">Max Wrap Width (px)</label>
-  <input type="number" id="wrapWidth" placeholder="1100" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <!-- Services section -->
+  <h3 style="margin-top:20px; margin-bottom:10px;">Services Offered</h3>
+  <div id="servicesContainer"></div>
 
-  <label for="boxShadow" style="display: block; margin: 10px 0 4px; font-weight: 600;">Box Shadow (CSS)</label>
-  <input type="text" id="boxShadow" value="0 8px 30px rgba(0,0,0,0.35)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
+  <button type="button" id="addServiceBtn" style="margin:10px 0 20px; width:100%; padding:10px; border-radius:10px; border:none; background:#555; color:#fff; font-weight:bold; cursor:pointer;">Add a Service</button>
 
-  <label for="glassBg" style="display: block; margin: 10px 0 4px; font-weight: 600;">Glass Background (RGBA)</label>
-  <input type="text" id="glassBg" value="rgba(255,255,255,0.08)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-
-  <label for="fontFamily" style="display: block; margin: 10px 0 4px; font-weight: 600;">Font Family (CSS)</label>
-  <input type="text" id="fontFamily" value="'Inter', system-ui, sans-serif" required style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-
-  <!-- Optional: Site content -->
-  <label for="siteName" style="display: block; margin: 10px 0 4px; font-weight: 600;">Site Name</label>
-  <input type="text" id="siteName" placeholder="Your Brand Name" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-
-  <label for="siteTagline" style="display: block; margin: 10px 0 4px; font-weight: 600;">Tagline</label>
-  <input type="text" id="siteTagline" placeholder="Your tagline goes here" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-
-  <label for="heroTitle" style="display: block; margin: 10px 0 4px; font-weight: 600;">Hero Section Title</label>
-  <input type="text" id="heroTitle" placeholder="Welcome to Our Brand" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-
-  <label for="heroSubtitle" style="display: block; margin: 10px 0 4px; font-weight: 600;">Hero Subtitle / Lead Text</label>
-  <textarea id="heroSubtitle" rows="3" placeholder="We create amazing experiences" style="width: 100%; padding: 10px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
-
-  <button type="submit" style="padding: 12px 20px; background: #8FAB36; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 700;">Generate Template</button>
+  <button type="submit" style="margin-top:10px; width:100%; padding:12px; border-radius:10px; border:none; background:#8FAB36; color:#fff; font-weight:bold; cursor:pointer;">Submit</button>
 </form>
 
-<pre id="output" style="margin-top:20px; background:#eee; padding:10px; border-radius:6px;"></pre>
-
 <script>
-document.getElementById('onboardingForm').addEventListener('submit', function(e){
+const servicesContainer = document.getElementById('servicesContainer');
+let serviceCount = 0;
+
+document.getElementById('addServiceBtn').addEventListener('click', () => {
+  serviceCount++;
+  const serviceDiv = document.createElement('div');
+  serviceDiv.style.background = '#111';
+  serviceDiv.style.padding = '12px';
+  serviceDiv.style.borderRadius = '8px';
+  serviceDiv.style.marginBottom = '12px';
+  serviceDiv.style.border = '1px solid #444';
+  serviceDiv.innerHTML = `
+    <h4 style="margin-bottom:8px;">Service ${serviceCount}</h4>
+    <label style="display:block; margin:6px 0 4px;">Service Name</label>
+    <input type="text" class="service-name" style="width:100%; padding:6px; border-radius:6px; border:1px solid #444; background:#222; color:#fff;" required>
+    <label style="display:block; margin:6px 0 4px;">Description</label>
+    <textarea class="service-desc" style="width:100%; padding:6px; border-radius:6px; border:1px solid #444; background:#222; color:#fff;" rows="3" required></textarea>
+    <label style="display:block; margin:6px 0 4px;">Contact Info</label>
+    <input type="text" class="service-contact" style="width:100%; padding:6px; border-radius:6px; border:1px solid #444; background:#222; color:#fff;" required>
+  `;
+  servicesContainer.appendChild(serviceDiv);
+});
+
+document.getElementById('onboardingForm').addEventListener('submit', async function(e){
   e.preventDefault();
 
+  const services = Array.from(document.querySelectorAll('#servicesContainer > div')).map(div => ({
+    name: div.querySelector('.service-name').value,
+    description: div.querySelector('.service-desc').value,
+    contact: div.querySelector('.service-contact').value
+  }));
+
   const data = {
-    brandColor: document.getElementById('brandColor').value,
-    brandHoverColor: document.getElementById('brandHoverColor').value,
-    accentColor: document.getElementById('accentColor').value,
-    darkColor: document.getElementById('darkColor').value,
-    mutedColor: document.getElementById('mutedColor').value,
-    bgColor: document.getElementById('bgColor').value,
-    cardBgColor: document.getElementById('cardBgColor').value,
-    borderRadius: document.getElementById('borderRadius').value,
-    wrapWidth: document.getElementById('wrapWidth').value,
-    boxShadow: document.getElementById('boxShadow').value,
-    glassBg: document.getElementById('glassBg').value,
-    fontFamily: document.getElementById('fontFamily').value,
     siteName: document.getElementById('siteName').value,
     siteTagline: document.getElementById('siteTagline').value,
     heroTitle: document.getElementById('heroTitle').value,
-    heroSubtitle: document.getElementById('heroSubtitle').value
+    heroSubtitle: document.getElementById('heroSubtitle').value,
+    brand: document.getElementById('brandColor').value,
+    dark: document.getElementById('darkColor').value,
+    muted: document.getElementById('mutedColor').value,
+    bg: document.getElementById('bgColor').value,
+    cardBg: document.getElementById('cardBgColor').value,
+    services
   };
 
-  document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+  try {
+    const response = await fetch('https://your-n8n-instance.com/webhook/client-onboarding', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'client_onboarding.json';
-  a.click();
-  URL.revokeObjectURL(url);
+    if(response.ok){
+      alert('Form submitted successfully!');
+      this.reset();
+      servicesContainer.innerHTML = '';
+      serviceCount = 0;
+    } else {
+      alert('Error submitting form.');
+    }
+  } catch (err) {
+    console.error(err);
+    alert('Error connecting to the server.');
+  }
 });
 </script>
+
 </body>
 </html>
